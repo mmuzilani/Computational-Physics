@@ -5,14 +5,32 @@
 
 ## 🧠 Introduction
 
-This project demonstrates the **Euler Method**, a simple and powerful **numerical technique** for solving first-order Ordinary Differential Equations (ODEs).  
+This project demonstrates the **Euler Method** for solving first-order Ordinary Differential Equations (ODEs).  
 It prints each computation step in a **mathematical table format** and compares the **Euler approximation** with the **analytical (exact)** solution.
+
+## 🧩 Euler Formula Explanation
+
+The Euler method is a simple numerical approach that replaces the derivative with a finite difference:
+
+$$
+\frac{dy}{dt} \approx \frac{y_{n+1} - y_n}{h}
+$$
+
+Rearranging gives:
+
+$$
+y_{n+1} = y_n + h \cdot f(t_n, y_n)
+$$
+
+This iterative process approximates the function step by step from the initial value.
+
+---
 
 The program solves the ODE:
 
-\[
+$$
 \frac{dy}{dt} = -2y, \quad y(0) = 1
-\]
+$$
 
 ---
 
@@ -20,9 +38,9 @@ The program solves the ODE:
 
 Euler Method approximates the next value of \( y \) using the formula:
 
-\[
+$$
 y_{n+1} = y_n + h \cdot f(t_n, y_n)
-\]
+$$
 
 Where:
 | Symbol | Meaning |
@@ -33,14 +51,15 @@ Where:
 | \( f(t_n, y_n) \) | Derivative (slope) at current point |
 
 🧩 **In this example:**
-\[
+
+$$
 f(t, y) = -2y, \quad h = 0.25, \quad y(0) = 1
-\]
+$$
 
 The **exact solution** of this ODE is:
-\[
+$$
 y(t) = e^{-2t}
-\]
+$$
 
 ---
 
