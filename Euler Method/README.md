@@ -1,7 +1,5 @@
 # ⚛️ Euler Method for Solving ODEs (Step-by-Step with h = 0.25)
 **Author:** Md. Mahiuddin Zilani  
-**Date:** October 26, 2025  
-**Field:** Computational Mathematics for Physics  
 
 ---
 
@@ -58,21 +56,44 @@ y(t) = e^{-2t}
 
 ---
 
-## 💻 Code Overview
+The program:
 
-```python
-def f(t, y):
-    return -2 * y  # ODE definition
+Solves the ODE numerically using Euler’s formula.
 
-def y_exact(t):
-    return np.exp(-2 * t)  # Analytical solution
+Compares each step with the exact analytical value.
 
-def euler_method(f, t0, y0, h, t_end):
-    n_steps = int((t_end - t0) / h)
-    t_values = np.zeros(n_steps + 1)
-    y_values = np.zeros(n_steps + 1)
-    t_values[0], y_values[0] = t0, y0
+Prints a table of results with errors.
 
-    for i in range(n_steps):
-        y_values[i + 1] = y_values[i] + h * f(t_values[i], y_values*
+Plots both curves for visual comparison.
 
+---
+------------------------------------------------------
+   Step |    t_n   |     y_n (Euler)   |   y_exact   |   Error
+------------------------------------------------------
+      0 |    0.000 |        1.000000 |   1.000000 | 0.000000
+      1 |    0.250 |        0.500000 |   0.606531 | 0.106531
+      2 |    0.500 |        0.250000 |   0.367879 | 0.117879
+      3 |    0.750 |        0.125000 |   0.223130 | 0.098130
+      4 |    1.000 |        0.062500 |   0.135335 | 0.072835
+      5 |    1.250 |        0.031250 |   0.082085 | 0.050835
+      6 |    1.500 |        0.015625 |   0.049787 | 0.034162
+      7 |    1.750 |        0.007812 |   0.030197 | 0.022385
+      8 |    2.000 |        0.003906 |   0.018316 | 0.014410
+      9 |    2.250 |        0.001953 |   0.011109 | 0.009156
+     10 |    2.500 |        0.000977 |   0.006738 | 0.005761
+     11 |    2.750 |        0.000488 |   0.004086 | 0.003598
+     12 |    3.000 |        0.000244 |   0.002479 | 0.002235
+------------------------------------------------------
+
+raphical Result
+
+The graph shows:
+
+Blue Line (dots) → Euler Method approximation
+
+Red Dashed Line → Exact analytical solution 
+y=e−2t
+y=e
+−2t
+
+When h = 0.25, the Euler method gives a fairly accurate result, but you can observe small deviations due to truncation errors.
