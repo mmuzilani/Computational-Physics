@@ -1,14 +1,14 @@
-# ⚛️ Euler Method for Solving ODEs (Step-by-Step with h = 0.25)
+# Euler Method for Solving ODEs (Step-by-Step with h = 0.25)
 **Author:** Md. Mahiuddin Zilani  
 
 ---
 
-## 🧠 Introduction
+##  Introduction
 
 This project demonstrates the **Euler Method** for solving first-order Ordinary Differential Equations (ODEs).  
 It prints each computation step in a **mathematical table format** and compares the **Euler approximation** with the **analytical (exact)** solution.
 
-## 🧩 Euler Formula Explanation
+##  Euler Formula Explanation
 
 The Euler method is a simple numerical approach that replaces the derivative with a finite difference:
 
@@ -34,7 +34,7 @@ $$
 
 ---
 
-## 📘 Theory
+## Theory
 
 Euler Method approximates the next value of \( y \) using the formula:
 
@@ -50,7 +50,7 @@ Where:
 | \( h \) | Step size |
 | \( f(t_n, y_n) \) | Derivative (slope) at current point |
 
-🧩 **In this example:**
+**In this example:**
 
 $$
 f(t, y) = -2y, \quad h = 0.25, \quad y(0) = 1
@@ -63,7 +63,7 @@ $$
 
 ---
 
-## ⚙️ Parameters
+##  Parameters
 
 | Parameter | Value | Description |
 |:--|:--|:--|
@@ -104,7 +104,7 @@ Plots both curves for visual comparison.
      12 |    3.000 |        0.000244 |   0.002479 | 0.002235
 -------------------------------------------------------------
 
-raphical Result
+Graphical Result
 
 The graph shows:
 
