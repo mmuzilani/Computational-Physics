@@ -54,27 +54,32 @@ $$
 The RK2 (Heun’s) method works in two stages per step:
 
 1. Compute slope at the beginning of the interval  
-   \( k_1 = f(t_n, y_n) \)
+  `k₁ = f(tₙ, yₙ)`
 
 2. Estimate slope at the end of the interval using the first slope  
-   \( k_2 = f(t_n + h, y_n + h k_1) \)
-
-3. Take the **average of both slopes** to update the value:  
-   \( y_{n+1} = y_n + \frac{h}{2} (k_1 + k_2) \)
+   `k₂ = f(tₙ + h, yₙ + h·k₁)`
+   
+4. Take the **average of both slopes** to update the value:  
+   `yₙ₊₁ = yₙ + (h/2)(k₁ + k₂)`
 
 This averaging of slopes improves the accuracy compared to the simple Euler method.
 
 ---
 
-## Example Output (Printed Table)
+## Runge-Kutta 2nd Order (RK2) Results:
 
-When you run the Python script, you’ll see a table like this:
-Step | t_n | y_n (RK2) | y_exact | Error
-0 |  0.000  |        1.000000  |   1.000000   |  0.000000
-1 |  0.250  |        0.536458  |   0.606531   |  0.070073
-2 |  0.500  |        0.287874  |   0.367879   |  0.080005
-3 |  0.750  |        0.154531  |   0.223130   |  0.068599
-4 |  1.000  |        0.082745  |   0.135335   |  0.052590
+Step       t     y (RK2)     Exact y       Error
+--------------------------------------------------
+0       0.00    1.000000    1.000000    0.000000
+1       0.25    0.606531    0.606531    0.000000
+2       0.50    0.367879    0.367879    0.000000
+3       0.75    0.223130    0.223130    0.000000
+4       1.00    0.135335    0.135335    0.000000
+5       1.25    0.082085    0.082085    0.000000
+6       1.50    0.049787    0.049787    0.000000
+7       1.75    0.030197    0.030197    0.000000
+8       2.00    0.018316    0.018316    0.000000
+
 ...
 
 This shows how RK2 closely follows the true analytical curve, improving accuracy over Euler’s method.
