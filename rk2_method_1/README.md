@@ -66,23 +66,6 @@ This averaging of slopes improves the accuracy compared to the simple Euler meth
 
 ---
 
-Step | t_n | y_n (RK2) | y_exact | Error
-
-0 | 0.00 | 1.000000 | 1.000000 | 0.000000
-1 | 0.25 | 0.606531 | 0.606531 | 0.000000
-2 | 0.50 | 0.367879 | 0.367879 | 0.000000
-3 | 0.75 | 0.223130 | 0.223130 | 0.000000
-4 | 1.00 | 0.135335 | 0.135335 | 0.000000
-5 | 1.25 | 0.082085 | 0.082085 | 0.000000
-6 | 1.50 | 0.049787 | 0.049787 | 0.000000
-7 | 1.75 | 0.030197 | 0.030197 | 0.000000
-8 | 2.00 | 0.018316 | 0.018316 | 0.000000
-...
-
-This shows how RK2 closely follows the true analytical curve, improving accuracy over Euler’s method.
-
----
-
 ## Graphical Comparison
 
 - **Blue circles:** RK2 Approximation  
